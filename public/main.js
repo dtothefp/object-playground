@@ -128,3 +128,7 @@ new OForm({
   url: '/api',
   encode: 'formData'
 });
+
+console.log('Collection of OForm instances: ', OForm.collection);
+console.log('Get form 1 from the collection: ', OForm.get('form-1'));
+console.log('OForm defaults: ', OForm.defaults);
