@@ -1,0 +1,15 @@
+html > * {
+  box-sizing: border-box;
+}
+
+.form-container {
+  float: left;
+  width: 33.3333%;
+}
+
+label,
+input {
+  display: block;
+}
+
+

@@ -109,3 +109,17 @@ new OForm({
   selector: 'form-1',
   url: '/api'
 });
+
+new OForm({
+  name: 'form-2',
+  selector: 'form-2',
+  url: '/api',
+  endode: 'json'
+});
+
+new OForm({
+  name: 'form-3',
+  selector: 'form-3',
+  url: '/api',
+  encode: 'formData'
+});
