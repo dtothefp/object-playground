@@ -52,12 +52,12 @@ var OForm = window.OForm = (function(){
 
   // Now extend the OForm prototype
   OForm.prototype.init = function(e){
+    var beforeData;
     e.preventDefault();
     // this.hasOwnProperty('before') will be false if no before property is defined when initializing the instance
     // this.hasOwnProperty('before') will be true if instance is instantiated with a before option set
     // therefor calling this.before will appropriately call the prototype function or default option defined on OForm 
-    var beforeData = this.before();
-      
+    beforeData = this.before();
     this.makeRequest(beforeData);
   };
 
@@ -114,7 +114,12 @@ new OForm({
   name: 'form-2',
   selector: 'form-2',
   url: '/api',
-  endode: 'json'
+  before: function(){
+    return JSON.stringify({
+      customStuff: 'My Stuff',
+      moreThings: 'A lot more things here'
+    });
+  }
 });
 
 new OForm({
